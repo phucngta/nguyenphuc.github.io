@@ -1,14 +1,11 @@
 ---
 layout: post
 published: false
-title: ''
+title: Các quy trình phân nhánh khi sử dụng Git
 ---
 # 4 quy trình phân nhánh cho Git
 
 https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
-
-In this article, we will cover the most popular branching workflows for Git users, so you can decide which fits better to your own development cycle.
-
 
 Chúng ta sẽ đề cập đến các quy trình phân nhánh phổ biến nhất cho người dùng Git, để lựa chọn quy trình phù hợp cho chu kỳ phát triển của riêng bạn.
 
@@ -25,22 +22,18 @@ Git Flow là quy trình được biết đến nhiều nhất trong danh sách n
 - develop — nhánh này chứa pre-production code. Khi các tính năng được phát triển xong sẽ merge vào nhánh develop này.
 
 Trong chu kỳ phát triển, một loạt các nhánh hỗ trợ được sử dụng:
-- `feature-*` - các nhánh tính năng được sử dụng để phát triển các tính năng mới cho các phiên bản sắp tới. Có thể tách từ nhánh `develop` và phải merge vào lại `develop` sau khi hoàn thành.
-- `hotfix-*` - Các nhánh hotfix là cần thiết để hành động ngay lập tức khi có trạng thái không mong muốn của chủ. Có thể tách ra khỏi chủ và phải hợp nhất thành chủ và phát triển.
-- `release- *` - chi nhánh phát hành hỗ trợ chuẩn bị phát hành sản xuất mới. Chúng cho phép sửa nhiều lỗi nhỏ và chuẩn bị dữ liệu meta để phát hành. Có thể tách ra khỏi sự phát triển và phải hợp nhất thành chủ và phát triển.
+- `feature-*` - nhánh tính năng: được sử dụng để phát triển các tính năng mới cho các phiên bản sắp tới. Có thể tách từ nhánh `develop` và phải merge vào lại `develop` sau khi hoàn thành.
+- `hotfix-*` - nhánh hotfix
+- `release- *` - nhánh phát hành: hỗ trợ phát hành phiên bản mới. Chúng cho phép sửa nhiều lỗi nhỏ và chuẩn bị dữ liệu meta để phát hành.
 
-During the development cycle, a variety of supporting branches are used:
-feature-* — feature branches are used to develop new features for the upcoming releases. May branch off from develop and must merge into develop.
-hotfix-* — hotfix branches are necessary to act immediately upon an undesired status of master. May branch off from master and must merge into master anddevelop.
-release-* — release branches support preparation of a new production release. They allow many minor bug to be fixed and preparation of meta-data for a release. May branch off from develop and must merge into master anddevelop.
-Advantages
-Ensures a clean state of branches at any given moment in the life cycle of project
-The branches naming follows a systematic pattern making it easier to comprehend
-It has extensions and support on most used git tools
-It is ideal when there it needs to be multiple version in production
-Disadvantages
-The Git history becomes unreadable
-The master/develop split is considered redundant and makes the Continuous Delivery and the Continuos Integration harder
-It isn’t recommended when it need to maintain single version in production
+### Ưu điểm:
+- Đảm bảo trạng thái của các nhánh tại bất kỳ thời điểm nào trong vòng đời của dự án.
+- Các nhánh được đặt tên một cách hệ thống, giúp việc đọc hiểu dễ hơn.
+- Có công cụ [gitflow](https://github.com/nvie/gitflow) hỗ trợ và đều được hỗ trợ trên hầu hết các công cụ git.
+- Mô hình lý tưởng khi cần có phát hành nhiều phiên bản.
 
+### Nhược điểm
+- Không thể truy vết lại được lịch sử Git.
+- Việc phân nhánh `develop` / `master` nhiều khi dư thừa và khiến cho việc tích hợp CI/CD trở nên khó khăn hơn.
+- Trong trường hợp chỉ có một version chính, thì mô hình này không tỏ ra không hiệu quả.
 
