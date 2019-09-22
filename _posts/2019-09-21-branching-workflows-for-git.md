@@ -41,16 +41,17 @@ Trong chu kỳ phát triển, một loạt các nhánh hỗ trợ được sử 
 Được tạo ra bởi GitHub vào năm 2011 và tuân theo 6 nguyên tắc sau:
 1. Bất cứ thứ gì trên nhánh `master` đều có thể triển khai.
 1. Để phát triển một tính năng mới, tạo một nhánh từ `master` và đặt tên nhánh mô tả cho tính năng đấy (ví dụ: new-oauth2-scopes)
-1. Commit lên nhánh đó ở dưới local, và thường xuyên push code lên nhánh cùng tên trên server.
-1. Khi bạn cần phản hồi hoặc trợ giúp hoặc bạn nghĩ chi nhánh đã sẵn sàng để hợp nhất, hãy mở một yêu cầu kéo
-1. Sau khi người khác đã xem xét và đăng xuất trên tính năng, bạn có thể hợp nhất nó thành chủ
-1. Khi nó được hợp nhất và được đẩy lên thành chủ, bạn có thể và nên triển khai ngay lập tức
-Ưu điểm
-nó thân thiện với việc giao hàng liên tục và tích hợp liên tục
-Một thay thế đơn giản hơn cho Git Flow
-Đó là lý tưởng khi nó cần duy trì phiên bản duy nhất trong sản xuất
-Nhược điểm
-Mã sản xuất có thể trở nên không ổn định dễ dàng nhất
-Không đầy đủ khi cần các kế hoạch phát hành
-Nó không giải quyết bất cứ điều gì về triển khai, môi trường, phát hành và các vấn đề
-Đó là đề xuất khi cần nhiều phiên bản trong sản xuất
+1. Commit lên nhánh đó ở dưới local, và thường xuyên push code lên nhánh cùng tên trêns server.
+1. Tạo một pull request khi bạn cần feedback, hỗ trợ, hoặc khi bạn nghĩ tính năng đã sẵn sàng để tích hợp.
+1. Khi tính năng đã được review, có thể merge vào nhánh `master`. Sau khi merge nên deploy sớm nhất có thể.
+
+### Ưu điểm
+- Kết hợp tốt với quy trình CI/CD.
+- Đơn giản hơn Git Flow.
+- Giải pháp thích hợp trong trường hợp chỉ cần duy trì một phiên bản duy nhất.
+
+### Nhược điểm
+- Production code dễ mất ổn định.
+- Không thích hợp khi cần các kế hoạch phát hành.
+- Không giải quyết các vấn đề liên quan tới triển khai, môi trường, phát hành,...
+- Không thích hợp khi cần phát hành nhiều phiên bản.
