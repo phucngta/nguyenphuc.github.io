@@ -36,3 +36,21 @@ Trong chu kỳ phát triển, một loạt các nhánh hỗ trợ được sử 
 - Không thể truy vết lại được lịch sử Git.
 - Việc phân nhánh `develop` / `master` nhiều khi dư thừa và khiến cho việc tích hợp CI/CD trở nên khó khăn hơn.
 - Trong trường hợp chỉ có một version chính, thì mô hình này không tỏ ra không hiệu quả.
+
+## GitHub Flow
+Được tạo ra bởi GitHub vào năm 2011 và tuân theo 6 nguyên tắc sau:
+1. Bất cứ thứ gì trên nhánh `master` đều có thể triển khai.
+1. Để phát triển một tính năng mới, tạo một nhánh từ `master` và đặt tên nhánh mô tả cho tính năng đấy (ví dụ: new-oauth2-scopes)
+1. Commit lên nhánh đó ở dưới local, và thường xuyên push code lên nhánh cùng tên lên server.
+1. Khi bạn cần phản hồi hoặc trợ giúp hoặc bạn nghĩ chi nhánh đã sẵn sàng để hợp nhất, hãy mở một yêu cầu kéo
+1. Sau khi người khác đã xem xét và đăng xuất trên tính năng, bạn có thể hợp nhất nó thành chủ
+1. Khi nó được hợp nhất và được đẩy lên thành chủ, bạn có thể và nên triển khai ngay lập tức
+Ưu điểm
+nó thân thiện với việc giao hàng liên tục và tích hợp liên tục
+Một thay thế đơn giản hơn cho Git Flow
+Đó là lý tưởng khi nó cần duy trì phiên bản duy nhất trong sản xuất
+Nhược điểm
+Mã sản xuất có thể trở nên không ổn định dễ dàng nhất
+Không đầy đủ khi cần các kế hoạch phát hành
+Nó không giải quyết bất cứ điều gì về triển khai, môi trường, phát hành và các vấn đề
+Đó là đề xuất khi cần nhiều phiên bản trong sản xuất
