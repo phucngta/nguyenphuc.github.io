@@ -41,7 +41,7 @@ Trong chu kỳ phát triển, một loạt các nhánh hỗ trợ được sử 
 Được tạo ra bởi GitHub vào năm 2011 và tuân theo 6 nguyên tắc sau:
 1. Bất cứ thứ gì trên nhánh `master` đều có thể triển khai.
 1. Để phát triển một tính năng mới, tạo một nhánh từ `master` và đặt tên nhánh mô tả cho tính năng đấy (ví dụ: new-oauth2-scopes)
-1. Commit lên nhánh đó ở dưới local, và thường xuyên push code lên nhánh cùng tên lên server.
+1. Commit lên nhánh đó ở dưới local, và thường xuyên push code lên nhánh cùng tên trên server.
 1. Khi bạn cần phản hồi hoặc trợ giúp hoặc bạn nghĩ chi nhánh đã sẵn sàng để hợp nhất, hãy mở một yêu cầu kéo
 1. Sau khi người khác đã xem xét và đăng xuất trên tính năng, bạn có thể hợp nhất nó thành chủ
 1. Khi nó được hợp nhất và được đẩy lên thành chủ, bạn có thể và nên triển khai ngay lập tức
